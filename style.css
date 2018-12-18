@@ -1,0 +1,84 @@
+/* ===== RESETS ===== */
+* {box-sizing:border-box;}
+html, body {padding:0;margin:0;}
+
+p {margin:0;}
+p + p {margin-top:10px;}
+
+a {
+  color:royalblue;
+  -webkit-text-decoration-skip:ink;
+  text-decoration-skip:ink;
+	text-decoration-skip-ink: auto;
+}
+
+
+/* ===== BASE SETUP ===== */
+body {
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size:18px;
+  background:#eee;
+}
+
+h1 {
+  font-family:'Arial';
+  font-weight:400;
+  margin:0 0 20px 0;
+}
+
+.panel {
+  background:#fff;
+  padding:20px;
+  margin:20px auto;
+  
+  max-width:960px;
+  width:90%;
+  box-shadow:0 1px 10px #ccc;
+}
+.panel + .panel {margin-top:0;}
+.panel:first-child {
+	min-height:190px;
+}
+
+.logo img {
+	width:150px;
+	float:right;
+}
+
+
+/* ===== RATING-SYSTEMET ===== */
+.rate {
+  display:block;
+  margin:0 auto 4px auto;
+  font-style:normal;
+  font-size:36px;
+}
+p + p .rate {
+	display:inline-block;
+	margin-top:10px;
+}
+.rate:before {
+	font-family:"FontAwesome";
+	display:inline-block;
+	padding-right:6px;
+}
+.rate-1:before {
+	content:"\f005";
+  color:#fa5130;
+}
+.rate-2:before {
+	content:"\f005  \f005";
+  color:#ffa747;
+}
+.rate-3:before {
+	content:"\f005  \f005  \f005";
+  color:#ffe144;
+}
+.rate-4:before {
+	content:"\f005  \f005  \f005  \f005";
+  color:#90e756;
+}
+.rate-5:before {
+	content:"\f005  \f005  \f005  \f005  \f005";
+  color:#1dc524;
+}
