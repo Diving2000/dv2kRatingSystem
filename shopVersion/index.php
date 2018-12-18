@@ -1,7 +1,7 @@
 <?php
 
-  require_once('config.php'); // Database forbindelse
-  require_once('functions.php'); // Funktioner
+  require_once('../config.php'); // Database forbindelse
+  require_once('../functions.php'); // Funktioner
 
   // Standard-besked der vises til alle
   $number_of_responses = get_number_of_responses($con);
@@ -45,20 +45,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Diving 2000's Service Rating</title>
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <link rel="icon" href="https://diving2000.dk/trustpilot/Logo_diving_2000-white-border.png" type="image/x-icon"/>
-  
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-  <link rel="stylesheet" href="style.css">
-  
+  <link rel="stylesheet" href="../style.css">
+
 </head>
 <body>
-  
+
   <div class="panel">
 		<div class="logo">
-			<img src="Logo_diving_2000.png" alt="">
+			<img src="../Logo_diving_2000.png" alt="">
 			<h1>
       	Er du tilfreds?
     	</h1>
@@ -70,13 +70,13 @@
 			Giv os din mening om den butiksservice du lige har modtaget...
 		</p>
 		<br>
-    <?php 
+    <?php
 			for($i = 5; $i >= 1; $i--){
-				echo '<p><a href="?rating=' . $i . '"><i class="rate rate-' . $i . '"></i></a></p>'; 
+				echo '<p><a href="?rating=' . $i . '"><i class="rate rate-' . $i . '"></i></a></p>';
 			}
 			}else {
 				echo '<p>' . $message . '</p>';
-				echo '<meta http-equiv="refresh" content="4;url=https://diving2000.dk/rating/shop.php" />';
+				echo '<meta http-equiv="refresh" content="4;url=https://diving2000.dk/rating/shopVersion" />';
 			}
     ?>
   </div>
@@ -87,6 +87,6 @@
       echo '</div>';
     }
   ?>
-  
+
 </body>
 </html>
